@@ -155,13 +155,6 @@ export default function SellerDashboard() {
             percentage={data.totalRequests > 0 ? Math.round((data.acceptedRequests / data.totalRequests) * 100) : 0}
             description="Acceptance rate"
           />
-          <StatCard 
-            title="Current Plan" 
-            value={data.plan}
-            icon={<FiStar />}
-            description="Subscription status"
-            isPlan={true}
-          />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
