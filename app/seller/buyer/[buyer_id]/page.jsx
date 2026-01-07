@@ -280,26 +280,6 @@ export default function BuyerProfile() {
                   </>
                 )}
               </div>
-
-              {/* Action Button */}
-              <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-green-100">
-                <button className="w-full md:w-auto group relative bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-green-200 flex items-center justify-center gap-3">
-                  <div className="absolute inset-0 bg-white/10 group-hover:bg-white/5 rounded-xl transition-colors"></div>
-                  <MessageCircle className="w-5 h-5 relative z-10" />
-                  <span className="relative z-10">Start Conversation</span>
-                  <div className="absolute -right-2 top-1/2 -translate-y-1/2 w-0 h-0 group-hover:w-4 group-hover:h-4 group-hover:-right-1 rounded-full bg-green-400 transition-all duration-300"></div>
-                </button>
-                
-                {/* Additional Mobile Actions */}
-                <div className="md:hidden flex gap-3 mt-4">
-                  <button className="flex-1 border border-green-600 text-green-600 hover:bg-green-50 font-medium py-2 px-4 rounded-lg transition-colors text-sm">
-                    View Orders
-                  </button>
-                  <button className="flex-1 border border-gray-300 text-gray-700 hover:bg-gray-50 font-medium py-2 px-4 rounded-lg transition-colors text-sm">
-                    Add Note
-                  </button>
-                </div>
-              </div>
             </div>
           </div>
         </div>
