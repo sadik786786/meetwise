@@ -168,25 +168,6 @@ export default function ClientProfilePage() {
                 </div>
               </div>
 
-              {/* Content Tabs for Mobile */}
-              <div className="md:hidden border-b border-gray-100">
-                <div className="flex overflow-x-auto">
-                  {['overview', 'contact'].map((tab) => (
-                    <button
-                      key={tab}
-                      onClick={() => setActiveTab(tab)}
-                      className={`flex-1 min-w-[100px] px-4 py-3 text-sm font-medium capitalize ${
-                        activeTab === tab 
-                          ? 'text-green-600 border-b-2 border-green-600' 
-                          : 'text-gray-500'
-                      }`}
-                    >
-                      {tab}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
               {/* Main Content */}
               <div className="p-4 md:p-6 lg:p-8">
                 {/* Desktop Layout */}
