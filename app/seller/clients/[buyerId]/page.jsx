@@ -165,19 +165,6 @@ export default function ClientProfilePage() {
                       <span className="text-xs md:text-sm font-medium">Verified Client</span>
                     </div>
                   </div>
-
-                  {/* Mobile Quick Actions */}
-                  <div className="md:hidden flex items-center gap-3 mt-4">
-                    <button className="p-2 bg-white/20 rounded-full">
-                      <Mail className="w-4 h-4" />
-                    </button>
-                    <button className="p-2 bg-white/20 rounded-full">
-                      <Phone className="w-4 h-4" />
-                    </button>
-                    <button className="p-2 bg-white text-green-600 rounded-full">
-                      <MessageCircle className="w-4 h-4" />
-                    </button>
-                  </div>
                 </div>
               </div>
 
