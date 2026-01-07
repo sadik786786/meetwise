@@ -15,25 +15,6 @@ export default function MinimalFooter() {
                         <span className="text-xl font-bold">MeetWise</span>
                     </div>
 
-                    {/* Links */}
-                    <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm">
-                        <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
-                            About
-                        </Link>
-                        <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
-                            Contact
-                        </Link>
-                        <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
-                            Privacy
-                        </Link>
-                        <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
-                            Terms
-                        </Link>
-                        <Link href="/blog" className="text-gray-400 hover:text-white transition-colors">
-                            Blog
-                        </Link>
-                    </div>
-
                     {/* Copyright */}
                     <div className="text-gray-400 text-sm">
                         © {new Date().getFullYear()} MeetWise
