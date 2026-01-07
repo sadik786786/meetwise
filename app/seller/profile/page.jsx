@@ -504,31 +504,6 @@ export default function SellerProfilePage() {
                           </div>
                         </div>
                       </div>
-
-                      <div className="bg-blue-50 p-3 rounded-lg border border-blue-100">
-                        <div className="flex items-center gap-2">
-                          <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-                            <FiAward className="w-4 h-4 text-white" />
-                          </div>
-                          <div>
-                            <p className="text-xs text-gray-600">Projects</p>
-                            <p className="text-lg font-bold text-gray-900">24+</p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="bg-amber-50 p-3 rounded-lg border border-amber-100">
-                        <div className="flex items-center gap-2">
-                          <div className="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center">
-                            <FiStar className="w-4 h-4 text-white" />
-                          </div>
-                          <div>
-                            <p className="text-xs text-gray-600">Rating</p>
-                            <p className="text-lg font-bold text-gray-900">4.8</p>
-                          </div>
-                        </div>
-                      </div>
-
                       <div className="bg-purple-50 p-3 rounded-lg border border-purple-100">
                         <div className="flex items-center gap-2">
                           <div className="w-8 h-8 bg-purple-500 rounded-lg flex items-center justify-center">
@@ -620,19 +595,6 @@ export default function SellerProfilePage() {
                             </div>
                           </div>
                         </div>
-
-                        <div className="bg-green-50 p-4 rounded-lg">
-                          <h4 className="font-semibold text-gray-900 mb-3 flex items-center gap-2 text-sm">
-                            <FiExternalLink className="w-4 h-4 text-green-600" />
-                            Quick Actions
-                          </h4>
-                          <div className="space-y-2">
-                            <button className="w-full text-left p-2 bg-white rounded border border-gray-200 hover:border-green-500 transition-colors text-sm">
-                              <span className="text-gray-900 font-medium">View Public Profile</span>
-                              <p className="text-gray-600 text-xs mt-1">See how clients view your profile</p>
-                            </button>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
@@ -707,59 +669,6 @@ export default function SellerProfilePage() {
                       <p className="text-xs text-gray-600">
                         Complete profiles receive 3x more project inquiries
                       </p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Performance Stats */}
-              {profile && (
-                <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
-                  <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <div className="w-7 h-7 bg-blue-100 rounded-lg flex items-center justify-center">
-                      <FiTrendingUp className="w-4 h-4 text-blue-600" />
-                    </div>
-                    Performance
-                  </h3>
-                  
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 bg-blue-50 rounded-lg flex items-center justify-center">
-                          <FiEye className="w-4 h-4 text-blue-600" />
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-600">Profile Views</p>
-                          <p className="text-lg font-bold text-gray-900">1,247</p>
-                        </div>
-                      </div>
-                      <span className="text-green-600 text-sm font-medium">+12%</span>
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 bg-green-50 rounded-lg flex items-center justify-center">
-                          <FiMessageSquare className="w-4 h-4 text-green-600" />
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-600">Inquiries</p>
-                          <p className="text-lg font-bold text-gray-900">48</p>
-                        </div>
-                      </div>
-                      <span className="text-green-600 text-sm font-medium">+8%</span>
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3">
-                        <div className="w-9 h-9 bg-amber-50 rounded-lg flex items-center justify-center">
-                          <FiHeart className="w-4 h-4 text-amber-600" />
-                        </div>
-                        <div>
-                          <p className="text-sm text-gray-600">Rating</p>
-                          <p className="text-lg font-bold text-gray-900">4.8/5</p>
-                        </div>
-                      </div>
-                      <span className="text-amber-600 text-sm font-medium">Top 10%</span>
                     </div>
                   </div>
                 </div>
