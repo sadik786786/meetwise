@@ -34,12 +34,6 @@ export async function GET() {
       [buyerId]
     );
 
-    // Subscription
-    const subscription = await pool.query(
-      "SELECT plan_type FROM buyer_subscriptions WHERE buyer_id = $1 AND is_active = true",
-      [buyerId]
-    );
-
     // Recent requirements
     const recentRequirements = await pool.query(
       `
@@ -61,7 +55,6 @@ export async function GET() {
       success: true,
       data: {
         totalRequirements: totalRequirements.rows[0].count,
-        plan: subscription.rows[0]?.plan_type || "Free",
         recentRequirements: recentRequirements.rows,
         userdata: userdata.rows[0],
         profile: profile.rows[0],
