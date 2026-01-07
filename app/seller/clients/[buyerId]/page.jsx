@@ -43,13 +43,6 @@ export default function ClientProfilePage() {
   useEffect(() => {
     const checkAccess = async () => {
       try {
-        const sub = await fetch("/api/seller/subscription").then(r => r.json());
-
-        if (!sub.is_active) {
-          router.push("/seller/subscription");
-          return;
-        }
-
         const res = await fetch(`/api/seller/clients/${buyerId}`);
         const data = await res.json();
         setProfile(data.data);
@@ -65,24 +58,6 @@ export default function ClientProfilePage() {
   const startChat = async () => {
     const seller_data = await fetch(`/api/seller/profile`).then(r => r.json());
     const seller_id = seller_data.data.id;
-  try {
-    const res = await fetch(`/api/chat/start/${seller_id}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        seller_id,
-        buyer_id : profile.id,
-      }),
-    });
-
-    const data = await res.json();
-
-    if (data.success) {
-      router.push(`/chat/${data.chat_id}`);
-    }
-  } catch (error) {
-    console.error("Start chat failed", error);
-  }
 };
 
   if (loading) {
