@@ -68,9 +68,6 @@ export default function SellerDashboard() {
               <p className="text-gray-600 mt-1">Welcome back! Here's what's happening with your business</p>
             </div>
             <div className="flex items-center gap-3">
-              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium">
-                {data.plan} Plan
-              </span>
               <div className="text-xs text-gray-500">
                 Member since {new Date(data.userdata.created_at).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
               </div>

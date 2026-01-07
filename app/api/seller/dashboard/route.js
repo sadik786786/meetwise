@@ -30,12 +30,6 @@ export async function GET() {
       [sellerId]
     );
 
-    // Subscription
-    const subscription = await pool.query(
-      "SELECT plan_type FROM seller_subscriptions WHERE seller_id = $1 AND is_active = 'true'",
-      [sellerId]
-    );
-
     // Recent requests
     const recentRequests = await pool.query(
       `
@@ -59,7 +53,6 @@ export async function GET() {
       data: {
         totalRequests: totalRequests.rows[0].count,
         acceptedRequests: acceptedRequests.rows[0].count,
-        plan: subscription.rows[0]?.plan_type || 'Free',
         recentRequests: recentRequests.rows,
         userdata : userdata.rows[0],
         profile : profile.rows[0]
