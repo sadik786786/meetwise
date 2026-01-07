@@ -46,20 +46,20 @@ export async function GET() {
       FROM buyer_requirements
       WHERE buyer_id = $1
       ORDER BY created_at DESC
-      LIMIT 5
+      LIMIT 3
       `,
       [buyerId]
     );
 
     return NextResponse.json({
-      success: true,
-      data: {
-        totalRequirements: totalRequirements.rows[0].count,
-        recentRequirements: recentRequirements.rows,
-        userdata: userdata.rows[0],
-        profile: profile.rows[0],
-      },
-    });
+  success: true,
+  data: {
+    totalRequirements: Number(totalRequirements.rows[0]?.count || 0),
+    recentRequirements: recentRequirements.rows || [],
+    userdata: userdata.rows[0] || null,
+    profile: profile.rows[0] || null,
+  },
+});
 
   } catch (error) {
     console.error("Buyer dashboard error:", error);
