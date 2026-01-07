@@ -41,7 +41,6 @@ export default function SellerRequestDetail() {
   const [updating, setUpdating] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
-  const [viewsRemaining, setViewsRemaining] = useState(0);
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -55,10 +54,6 @@ export default function SellerRequestDetail() {
       const res = await fetch(`/api/seller/requests/${id}`);
       
       if (!res.ok) throw new Error('Failed to fetch request details');
-      
-      const check = await fetch(`/api/seller/subscription`);
-      const { views_remaining } = await check.json() || {};
-      setViewsRemaining(views_remaining);
       
       const result = await res.json();
       if (result.success) {
@@ -467,11 +462,6 @@ export default function SellerRequestDetail() {
                   {request.status === "accepted" && (
                     <button
                       onClick={async () => {
-                        const res = await fetch(`/api/seller/view-buyer/${requirement.id}`);
-                        if (viewsRemaining === 0 || res.status === 403) {
-                          router.push("/seller/subscription");
-                          return;
-                        }
                         router.push(`/seller/buyer/${requirement.id}`);
                       }}
                       className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
