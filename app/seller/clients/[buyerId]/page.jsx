@@ -184,7 +184,7 @@ export default function ClientProfilePage() {
               {/* Content Tabs for Mobile */}
               <div className="md:hidden border-b border-gray-100">
                 <div className="flex overflow-x-auto">
-                  {['overview', 'contact', 'activity'].map((tab) => (
+                  {['overview', 'contact'].map((tab) => (
                     <button
                       key={tab}
                       onClick={() => setActiveTab(tab)}
