@@ -32,24 +32,6 @@ export async function GET(req, { params }) {
 
     const seller_user_id = sellerRes.rows[0].user_id;
 
-    /* ❌ Prevent self view */
-    if (seller_user_id === buyer_id) {
-      return NextResponse.json(
-        { error: "CANNOT_VIEW_SELF" },
-        { status: 400 }
-      );
-    }
-
-    /* 2️⃣ Track view (optional but recommended) */
-    await pool.query(
-      `
-      INSERT INTO viewed_profiles (buyer_id, seller_user_id)
-      VALUES ($1, $2)
-      ON CONFLICT DO NOTHING
-      `,
-      [buyer_id, seller_user_id]
-    );
-
     /* 3️⃣ Return seller profile */
     const profileRes = await pool.query(
       `
