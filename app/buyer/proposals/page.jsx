@@ -115,12 +115,6 @@ export default function BuyerProposalsPage() {
       {/* Mobile Sidebar Overlay */}
       <BuyerSidebar />
       
-
-      {/* Sidebar for Desktop */}
-      <div className="hidden lg:block">
-        <BuyerSidebar />
-      </div>
-      
       {/* Main Content */}
       <main className="flex-1 p-4 md:p-6 lg:p-8 w-full">
         <div className="max-w-6xl mx-auto">
